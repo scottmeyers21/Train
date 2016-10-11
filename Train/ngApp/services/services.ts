@@ -1,17 +1,19 @@
 ﻿namespace MyApp.Services {
 
-    export class MovieService {
-        private MovieResource;
+    export class CarService {
+        private CarResource;
 
-        public listMovies() {
-            return this.MovieResource.query();
+        public listCars() {
+            return this.CarResource.query();
         }
-
+        public save(car) {
+            return this.CarResource.save(car).$promise;
+        }
         constructor($resource: angular.resource.IResourceService) {
-            this.MovieResource = $resource('/api/movies/:id');
+            this.CarResource = $resource('/api/cars/:id');
         }
     }
 
-    angular.module('MyApp').service('movieService', MovieService);
+    angular.module('MyApp').service('carService', CarService);
 
 }

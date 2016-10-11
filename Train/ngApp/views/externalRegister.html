@@ -1,18 +1,13 @@
-﻿<fieldset>
-    <legend>Complete Registration</legend>
+﻿<h1>Welcome to the add page</h1>
 
-    <ul>
-        <li ng-repeat="message in controller.validationMessages">
-            {{message}}
-        </li>
-    </ul>
+<form ng-submit="controller.save()">
 
-    <form ng-submit="controller.register()">
-        <div>
-            <label>Email:</label>
-            <input ng-model="controller.registerUser.email" />
-        </div>
-        <input type="submit" value="Register" />
-    </form>
+    <div>
+        <label>
+            Name:
+        </label>
+        <input ng-model="controller.newCar.name" />
+    </div>
 
-</fieldset>
+    <input type="submit" value="Add" />
+</form>

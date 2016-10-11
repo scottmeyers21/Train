@@ -235,6 +235,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610102057246_FirstMigration.cs" />
+    <Compile Include="Migrations\201610102057246_FirstMigration.Designer.cs">
+      <DependentUpon>201610102057246_FirstMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610110509402_UpdatedModel.cs" />
+    <Compile Include="Migrations\201610110509402_UpdatedModel.Designer.cs">
+      <DependentUpon>201610110509402_UpdatedModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -255,11 +264,13 @@
     <Content Include="GitIgnore\.gitignore" />
     <Content Include="Global.asax" />
     <Content Include="ngApp\views\about.html" />
+    <Content Include="ngApp\views\addCarPage.html" />
     <Content Include="ngApp\views\confirmEmail.html" />
     <Content Include="ngApp\views\externalLogin.html" />
     <Content Include="ngApp\views\externalRegister.html" />
     <Content Include="ngApp\views\home.html" />
     <Content Include="ngApp\views\login.html" />
+    <Content Include="ngApp\views\modIncoming.html" />
     <Content Include="ngApp\views\notFound.html" />
     <Content Include="ngApp\views\register.html" />
     <Content Include="Scripts\angular-mocks.js" />
@@ -323,7 +334,12 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <EmbeddedResource Include="Migrations\201610102057246_FirstMigration.resx">
+      <DependentUpon>201610102057246_FirstMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610110509402_UpdatedModel.resx">
+      <DependentUpon>201610110509402_UpdatedModel.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -349,6 +365,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

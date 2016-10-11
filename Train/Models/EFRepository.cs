@@ -34,7 +34,11 @@ namespace Train.Models {
                 _db.SaveChanges();
             } else {
                 var original = this.Find(carToSave.Id);
-                original.Name = carToSave.Name;
+                original.Company = carToSave.Company;
+                original.EmptyOrLoaded = carToSave.EmptyOrLoaded;
+                original.CarType = carToSave.CarType;
+                original.ShippedBy = carToSave.ShippedBy;
+                original.RailcarNumber = carToSave.RailcarNumber;
                 _db.SaveChanges();
             }
         }
@@ -48,7 +52,11 @@ namespace Train.Models {
                 /// </summary> 
         public void UpdateCar(Cars carToUpdate) {
             var originalCar = this.Find(carToUpdate.Id);
-            originalCar.Name = carToUpdate.Name;
+            originalCar.Company = carToUpdate.Company;
+            originalCar.EmptyOrLoaded = carToUpdate.EmptyOrLoaded;
+            originalCar.CarType = carToUpdate.CarType;
+            originalCar.ShippedBy = carToUpdate.ShippedBy;
+            originalCar.RailcarNumber = carToUpdate.RailcarNumber;
             _db.SaveChanges();
         }
         /// <summary> 

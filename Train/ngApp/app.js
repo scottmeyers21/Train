@@ -37,6 +37,16 @@ var MyApp;
             controller: MyApp.Controllers.ConfirmEmailController,
             controllerAs: 'controller'
         })
+            .when('/addCarPage', {
+            templateUrl: '/ngApp/views/addCarPage.html',
+            controller: MyApp.Controllers.AddCarController,
+            controllerAs: 'controller'
+        })
+            .when('/modIncoming', {
+            templateUrl: '/ngApp/views/modIncoming.html',
+            controller: MyApp.Controllers.ModIncomingController,
+            controllerAs: 'controller'
+        })
             .otherwise({
             redirectTo: '/ngApp/views/notFound.html'
         });

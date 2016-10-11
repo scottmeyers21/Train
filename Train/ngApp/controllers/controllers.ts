@@ -1,17 +1,38 @@
 ﻿namespace MyApp.Controllers {
 
     export class HomeController {
-        public movies;
+        public cars;
 
         constructor
         (
-            private movieService: MyApp.Services.MovieService,
+            private carService: MyApp.Services.CarService,
             private $location: angular.ILocationService
         ) {
-            this.movies = this.movieService.listMovies();
+            this.cars = this.carService.listCars();
         }
     }
+    export class AddCarController {
+        public newCar;
+        public save() {
+            this.carService.save(this.newCar).then(() => { this.$location.path('/') });
+        }
+        constructor(
+            private carService: MyApp.Services.CarService,
+            private $location: angular.ILocationService
+        ) { }
 
+    }
+    export class ModIncomingController {
+        public cars;
+
+        constructor
+            (
+            private carService: MyApp.Services.CarService,
+            private $location: angular.ILocationService
+            ) {
+            this.cars = this.carService.listCars();
+        }
+    }
 
     export class AboutController {
 

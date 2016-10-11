@@ -84,3 +84,6 @@ c:\users\scott\documents\visual studio 2015\Projects\Train\Train\bin\Ninject.xml
 c:\users\scott\documents\visual studio 2015\Projects\Train\Train\bin\Ninject.Web.Common.xml
 c:\users\scott\documents\visual studio 2015\Projects\Train\Train\bin\Ninject.Web.WebApi.xml
 c:\users\scott\documents\visual studio 2015\Projects\Train\Train\bin\Ninject.Web.WebApi.WebHost.xml
+C:\Users\scott\documents\visual studio 2015\Projects\Train\Train\obj\Debug\Train.Migrations.FirstMigration.resources
+C:\Users\scott\documents\visual studio 2015\Projects\Train\Train\obj\Debug\Train.csproj.GenerateResource.Cache
+C:\Users\scott\documents\visual studio 2015\Projects\Train\Train\obj\Debug\Train.Migrations.UpdatedModel.resources

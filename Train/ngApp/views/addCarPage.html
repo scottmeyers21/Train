@@ -1,0 +1,51 @@
+﻿<h1>Welcome to the add page</h1>
+
+<form ng-submit="controller.save()">
+
+    <div>
+        <label>
+           Company:
+        </label>
+        <input required ng-model="controller.newCar.company" />
+     </div>
+
+    <div>
+        <label>
+            Empty or Loaded:
+        </label>
+        <select required name="Select One" ng-model="controller.newCar.emptyOrLoaded">
+            <option value="Empty">Empty</option>
+            <option value="Loaded">Loaded</option>
+        </select>
+     </div>
+
+    <div>
+        <label>
+            Car Type:
+        </label>
+        <select required name="Car Type" ng-model="controller.newCar.cartype">
+            <option value="Hopper">Hopper</option>
+            <option value="Flatbed">Flatbed</option>
+            <option value="Tank">Tank</option>
+            <option value="Gondola">Gondola</option>
+        </select>
+    </div>
+
+    <div>
+        <label>
+            Shipped By (UP or BNSF):
+        </label>
+        <select required name="Shipped By" ng-model="controller.newCar.shippedBy">
+            <option value="Union Pacific">Union Pacific</option>
+            <option value="BNSF">BNSF</option>
+        </select>
+    </div>
+
+    <div>
+        <label>
+            Railcar Number:
+        </label>
+        <input required ng-model="controller.newCar.railcarNumber" />
+    </div>
+    <input type="submit" value="Add" />
+</form>
