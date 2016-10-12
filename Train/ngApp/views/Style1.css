@@ -1,0 +1,61 @@
+﻿body {
+}
+
+/*Add Car Page*/
+#addCarHeader {
+margin-left: 190px;
+padding-bottom: 10px;
+}
+#emptyOrLoaded {
+width: 196px;
+}
+#carType {
+width: 196px;
+}
+#shippedBy {
+width: 196px;
+}
+.inline-fields {
+display: inline-block;
+}
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+    margin-top: 7px;
+    margin-right: 7px;
+}
+input {
+  display: inline-block;
+  
+}
+.addCarDiv {
+padding-bottom: 7px;
+
+}
+#addCarButton {
+width: 375px;
+height: 35px;
+margin-left: 80px;
+margin-top: 12px;
+border-radius: 12px;
+font-size: large
+}
+#cancelCarButton {
+width: 375px;
+height: 35px;
+margin-left: 80px;
+margin-top: 12px;
+border-radius: 12px;
+font-size: large
+}
+#addCarForm {
+border:thin solid;
+border-radius: 10px;
+margin-right: 900px;
+padding-top: 30px;
+padding-bottom: 30px;
+margin-left: 50px;
+}

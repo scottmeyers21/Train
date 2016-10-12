@@ -1,6 +1,6 @@
 var MyApp;
 (function (MyApp) {
-    angular.module('MyApp', ['ngRoute', 'ngResource']).config(function ($routeProvider, $locationProvider) {
+    angular.module('MyApp', ['ngRoute', 'ngResource', 'ui.bootstrap']).config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
             templateUrl: '/ngApp/views/home.html',
