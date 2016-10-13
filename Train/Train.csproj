@@ -281,7 +281,9 @@
     <Content Include="ngApp\views\confirmEmail.html" />
     <Content Include="ngApp\views\externalLogin.html" />
     <Content Include="ngApp\views\externalRegister.html" />
-    <Content Include="ngApp\views\home.html" />
+    <Content Include="ngApp\views\home.html">
+      <BrowseToURL>/ngApp/views/home.html</BrowseToURL>
+    </Content>
     <Content Include="ngApp\views\login.html" />
     <Content Include="ngApp\views\modIncoming.html" />
     <Content Include="ngApp\views\notFound.html" />
