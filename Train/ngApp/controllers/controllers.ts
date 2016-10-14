@@ -14,7 +14,7 @@
     export class AddCarController {
         public newCar;
         public save() {
-            this.carService.save(this.newCar).then(() => { this.$location.path('/') });
+            this.carService.save(this.newCar).then(() => this.newCar = {}); 
         }
         constructor(
             private carService: MyApp.Services.CarService,

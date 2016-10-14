@@ -18,7 +18,7 @@ var MyApp;
             }
             AddCarController.prototype.save = function () {
                 var _this = this;
-                this.carService.save(this.newCar).then(function () { _this.$location.path('/'); });
+                this.carService.save(this.newCar).then(function () { return _this.newCar = {}; });
             };
             return AddCarController;
         }());
@@ -40,4 +40,3 @@ var MyApp;
         Controllers.AboutController = AboutController;
     })(Controllers = MyApp.Controllers || (MyApp.Controllers = {}));
 })(MyApp || (MyApp = {}));
-//# sourceMappingURL=controllers.js.map

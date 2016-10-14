@@ -1,6 +1,6 @@
 ﻿<h1 id="addCarHeader">Incoming Car</h1>
 
-<form class="form-inline" id="addCarForm">
+<form class="form-inline" id="addCarForm" name="controller.addForm">
 
    
     <div class="addCarDiv">
@@ -55,7 +55,7 @@
             Railcar Number:
         </label>
         <span class="addCarSpan">
-            <input class="form-control" required ng-model="controller.newCar.railcarNumber" />
+            <input class="form-control" pattern="(?=^.{1,10}$)^([A-Za-z]{1,4}\s*[0-9]{1,6})$" required ng-model="controller.newCar.railcarNumber" />
         </span>
     </div>
     <div class="addCarDiv">

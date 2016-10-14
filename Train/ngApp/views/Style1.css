@@ -1,10 +1,43 @@
 ﻿body {
 }
-
+/* navbar */
+.navbar-default {
+    background-color: #27273d;
+    border-color: #E7E7E7;
+}
+/* title */
+.navbar-default .navbar-brand {
+    color: #dcdce8;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #dcdce8;
+}
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: #dcdce8;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #dcdce8;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #dcdce8;
+    background-color:  #27273d;
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #dcdce8;
+    background-color:  #27273d;
+}
 /*Add Car Page*/
 #addCarHeader {
 margin-left: 190px;
 padding-bottom: 10px;
+padding-top: 50px;
 }
 #emptyOrLoaded {
 width: 196px;
@@ -54,7 +87,7 @@ font-size: large
 #addCarForm {
 border:thin solid;
 border-radius: 10px;
-margin-right: 900px;
+margin-right: 1300px;
 padding-top: 30px;
 padding-bottom: 30px;
 margin-left: 50px;
