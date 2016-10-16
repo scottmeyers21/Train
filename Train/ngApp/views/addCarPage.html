@@ -8,7 +8,7 @@
             Company:
         </label>
         <span class="addCarSpan">
-        <input class="form-control" required ng-model="controller.newCar.company" />
+        <input class="form-control" name="company" required ng-model="controller.newCar.company" />
         </span>
     </div>
 
@@ -17,7 +17,7 @@
             Empty or Loaded:
         </label>
         <span class="addCarSpan">
-            <select class="form-control" id="emptyOrLoaded" required name="Select One" ng-model="controller.newCar.emptyOrLoaded">
+            <select required class="form-control" id="emptyOrLoaded"  name="emptyOrLoaded" ng-model="controller.newCar.emptyOrLoaded">
                 <option value="Empty">Empty</option>
                 <option value="Loaded">Loaded</option>
             </select>
@@ -29,7 +29,7 @@
             Car Type:
         </label>
         <span class="addCarSpan">
-            <select class="form-control" id="carType" required name="Car Type" ng-model="controller.newCar.cartype">
+            <select class="form-control" id="carType" required name="carType" ng-model="controller.newCar.cartype">
                 <option value="Hopper">Hopper</option>
                 <option value="Flatbed">Flatbed</option>
                 <option value="Tank">Tank</option>
@@ -43,7 +43,7 @@
             Shipped By (UP or BNSF):
         </label>
         <span class="addCarSpan">
-            <select class="form-control" id="shippedBy" required name="Shipped By" ng-model="controller.newCar.shippedBy">
+            <select class="form-control" id="shippedBy" required name="shippedBy" ng-model="controller.newCar.shippedBy">
                 <option value="Union Pacific">Union Pacific</option>
                 <option value="BNSF">BNSF</option>
             </select>
@@ -55,7 +55,7 @@
             Railcar Number:
         </label>
         <span class="addCarSpan">
-            <input class="form-control" pattern="(?=^.{1,10}$)^([A-Za-z]{1,4}\s*[0-9]{1,6})$" required ng-model="controller.newCar.railcarNumber" />
+            <input class="form-control" pattern="(?=^.{1,10}$)^([A-Za-z]{1,4}\s*[0-9]{1,6})$" required name="railCarNumber" ng-model="controller.newCar.railcarNumber" />
         </span>
     </div>
     <div class="addCarDiv">
