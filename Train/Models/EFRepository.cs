@@ -34,7 +34,6 @@ namespace Train.Models {
                 _db.SaveChanges();
             } else {
                 var original = this.Find(carToSave.Id);
-                original.Company = carToSave.Company;
                 original.EmptyOrLoaded = carToSave.EmptyOrLoaded;
                 original.CarType = carToSave.CarType;
                 original.ShippedBy = carToSave.ShippedBy;
@@ -52,7 +51,6 @@ namespace Train.Models {
                 /// </summary> 
         public void UpdateCar(Cars carToUpdate) {
             var originalCar = this.Find(carToUpdate.Id);
-            originalCar.Company = carToUpdate.Company;
             originalCar.EmptyOrLoaded = carToUpdate.EmptyOrLoaded;
             originalCar.CarType = carToUpdate.CarType;
             originalCar.ShippedBy = carToUpdate.ShippedBy;

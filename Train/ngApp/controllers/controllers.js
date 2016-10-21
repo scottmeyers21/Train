@@ -20,6 +20,9 @@ var MyApp;
                 var _this = this;
                 this.carService.save(this.newCar).then(function () { return _this.newCar = {}; });
             };
+            AddCarController.prototype.cancel = function () {
+                this.newCar = {};
+            };
             return AddCarController;
         }());
         Controllers.AddCarController = AddCarController;

@@ -16,6 +16,9 @@
         public save() {
             this.carService.save(this.newCar).then(() => this.newCar = {}); 
         }
+        public cancel() {
+            this.newCar = {};
+        }
         constructor(
             private carService: MyApp.Services.CarService,
             private $location: angular.ILocationService

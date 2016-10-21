@@ -253,6 +253,18 @@
     <Compile Include="Migrations\201610110509402_UpdatedModel.Designer.cs">
       <DependentUpon>201610110509402_UpdatedModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610200454488_company.cs" />
+    <Compile Include="Migrations\201610200454488_company.Designer.cs">
+      <DependentUpon>201610200454488_company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610200646224_removeCompany.cs" />
+    <Compile Include="Migrations\201610200646224_removeCompany.Designer.cs">
+      <DependentUpon>201610200646224_removeCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610210500357_ApplicationUser.cs" />
+    <Compile Include="Migrations\201610210500357_ApplicationUser.Designer.cs">
+      <DependentUpon>201610210500357_ApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -368,6 +380,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610110509402_UpdatedModel.resx">
       <DependentUpon>201610110509402_UpdatedModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610200454488_company.resx">
+      <DependentUpon>201610200454488_company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610200646224_removeCompany.resx">
+      <DependentUpon>201610200646224_removeCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610210500357_ApplicationUser.resx">
+      <DependentUpon>201610210500357_ApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

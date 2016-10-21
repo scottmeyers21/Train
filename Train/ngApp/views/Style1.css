@@ -1,7 +1,15 @@
 ﻿body {
    
 }
-
+/*REGISTER PAGE*/
+#registerButton {
+width: 5%;
+height: 35px;
+margin-left: 50%;
+margin-top: 7px;
+display: block;
+font-size: large
+}
 #home-background {
  /*background-image: url("http://lovesphotoalbum.com/wp-content/uploads/2011/09/Black-White-Close-Up-Of-Railroad-Tracks-Ties-Stone.jpg");*/
  position: relative;
@@ -70,6 +78,12 @@ margin-left: 10%;
 padding-bottom: 10px;
 padding-top: 50px;
 }
+#companyText {
+width: 33%;
+}
+#railcarText {
+width: 33%;
+}
 #emptyOrLoaded {
 width: 33%;
 }
@@ -93,6 +107,7 @@ label{
 }
 input {
   display: inline-block;
+  width: 200px;
   
 }
 .addCarDiv {
