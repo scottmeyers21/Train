@@ -6,6 +6,9 @@
         public listCars() {
             return this.CarResource.query();
         }
+        public listUserCars(userId) {
+            return this.CarResource.query({ userId: userId });
+        }
         public save(car) {
             return this.CarResource.save(car).$promise;
         }

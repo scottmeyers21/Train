@@ -7,6 +7,7 @@ namespace Train.Models {
         void DeleteCar(int id);
         void Dispose();
         Cars Find(int id);
+        IList<Cars> GetUserCars(string userId);
         IList<Cars> ListCars();
         void SaveCar(Cars carToSave);
         void UpdateCar(Cars carToUpdate);

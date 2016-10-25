@@ -9,6 +9,9 @@ var MyApp;
             CarService.prototype.listCars = function () {
                 return this.CarResource.query();
             };
+            CarService.prototype.listUserCars = function (userId) {
+                return this.CarResource.query({ userId: userId });
+            };
             CarService.prototype.save = function (car) {
                 return this.CarResource.save(car).$promise;
             };

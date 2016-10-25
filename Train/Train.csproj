@@ -265,6 +265,10 @@
     <Compile Include="Migrations\201610210500357_ApplicationUser.Designer.cs">
       <DependentUpon>201610210500357_ApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610210641596_IdentityFix.cs" />
+    <Compile Include="Migrations\201610210641596_IdentityFix.Designer.cs">
+      <DependentUpon>201610210641596_IdentityFix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -301,6 +305,7 @@
     <Content Include="ngApp\views\notFound.html" />
     <Content Include="ngApp\views\register.html" />
     <Content Include="ngApp\views\Style1.css" />
+    <Content Include="ngApp\views\userProfile.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="Scripts\angular-resource.min.js" />
@@ -389,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610210500357_ApplicationUser.resx">
       <DependentUpon>201610210500357_ApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610210641596_IdentityFix.resx">
+      <DependentUpon>201610210641596_IdentityFix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

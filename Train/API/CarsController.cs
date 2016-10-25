@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Microsoft.AspNet.Identity;
 
 namespace Train.API
 {
@@ -18,7 +19,15 @@ namespace Train.API
             return car;
         }
 
+        [HttpGet]
+        [Route("api/Cars/ListUserCars/{userId}")]
+        public IEnumerable<Cars> GetUserCars(string userId) {
+            var cars = _repo.GetUserCars(userId);
+            return cars;
+        }
+
         public IHttpActionResult Post(Cars car) {
+            car.UserId = User.Identity.GetUserId();
             if (!ModelState.IsValid) {
                 return BadRequest(this.ModelState);
             }

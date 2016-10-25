@@ -36,8 +36,23 @@
             this.cars = this.carService.listCars();
         }
     }
+    export class UserProfileController {
+        public cars;
+
+        constructor
+            (
+            private carService: MyApp.Services.CarService,
+            private $location: angular.ILocationService,
+            $routeParams: ng.route.IRouteParamsService,
+            private $window: ng.IWindowService
+            ) {
+            this.cars = this.carService.listUserCars($routeParams['userId']);
+        }
+
+    }
 
     export class AboutController {
 
     }
+    
 }

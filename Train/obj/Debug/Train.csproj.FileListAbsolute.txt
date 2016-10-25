@@ -211,3 +211,4 @@ C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Co
 C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Train.Migrations.company.resources
 C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Train.Migrations.removeCompany.resources
 C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Train.Migrations.ApplicationUser.resources
+C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Train.Migrations.IdentityFix.resources

@@ -47,6 +47,11 @@
                 controller: MyApp.Controllers.ModIncomingController,
                 controllerAs: 'controller'
             })
+            .when('/userProfile/:userId', {
+                templateUrl: '/ngApp/views/userProfile.html',
+                controller: MyApp.Controllers.UserProfileController,
+                controllerAs: 'controller'
+            })
 
             .otherwise({
                 redirectTo: '/ngApp/views/notFound.html'

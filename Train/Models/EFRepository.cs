@@ -1,7 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Web;
+using Train;
 using Train.Models;
 
 namespace Train.Models {
@@ -32,6 +36,7 @@ namespace Train.Models {
             if (carToSave.Id == 0) {
                 _db.Cars.Add(carToSave);
                 _db.SaveChanges();
+                
             } else {
                 var original = this.Find(carToSave.Id);
                 original.EmptyOrLoaded = carToSave.EmptyOrLoaded;
@@ -40,6 +45,13 @@ namespace Train.Models {
                 original.RailcarNumber = carToSave.RailcarNumber;
                 _db.SaveChanges();
             }
+        }
+        public IList<Cars> GetUserCars(string userId) {
+            return _db.Cars.Where(c => (c.UserId == userId)).ToList();
+
+
+
+
         }
         public void Delete(int id) {
             var car = this.Find(id);

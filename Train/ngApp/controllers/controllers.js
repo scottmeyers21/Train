@@ -35,6 +35,16 @@ var MyApp;
             return ModIncomingController;
         }());
         Controllers.ModIncomingController = ModIncomingController;
+        var UserProfileController = (function () {
+            function UserProfileController(carService, $location, $routeParams, $window) {
+                this.carService = carService;
+                this.$location = $location;
+                this.$window = $window;
+                this.cars = this.carService.listUserCars($routeParams['userId']);
+            }
+            return UserProfileController;
+        }());
+        Controllers.UserProfileController = UserProfileController;
         var AboutController = (function () {
             function AboutController() {
             }
