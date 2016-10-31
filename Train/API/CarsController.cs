@@ -20,7 +20,7 @@ namespace Train.API
         }
 
         [HttpGet]
-        [Route("api/Cars/ListUserCars/{userId}")]
+        [Route("api/Cars/UserProfile/{userId}")]
         public IEnumerable<Cars> GetUserCars(string userId) {
             var cars = _repo.GetUserCars(userId);
             return cars;

@@ -2,6 +2,7 @@
 
     export class AccountController {
         public externalLogins;
+        public cars;
 
 
         public getClaim(type) {
@@ -16,13 +17,18 @@
             this.accountService.logout();
         }
 
+        public getUserId() {
+            this.accountService.getUserId();
+        }
+
         public getExternalLogins() {
             return this.accountService.getExternalLogins();
         }
 
-        constructor(private accountService: MyApp.Services.AccountService, private $location: ng.ILocationService) {
+        constructor(private accountService: MyApp.Services.AccountService, private $location: ng.ILocationService, private carService: MyApp.Services.CarService) {
             this.getExternalLogins().then((results) => {
                 this.externalLogins = results;
+                this.cars = this.carService.listCars();
             });
         }
     }
@@ -56,6 +62,9 @@
             }).catch((results) => {
                 this.validationMessages = results;
             });
+        }
+        public cancel() {
+            this.registerUser = {}
         }
 
         constructor(private accountService: MyApp.Services.AccountService, private $location: ng.ILocationService) { }

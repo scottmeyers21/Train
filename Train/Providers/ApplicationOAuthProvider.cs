@@ -77,6 +77,7 @@ namespace Train.Providers {
             IDictionary<string, string> data = new Dictionary<string, string>
             {
                 { "userName", user.UserName },
+                { "userId", user.Id }
             };
 
             // add claims (modified by Stephen)

@@ -6,6 +6,9 @@
         storeUserInfo(userInfo) {
             // store auth token
             this.$window.sessionStorage.setItem('token', userInfo.access_token);
+
+            // store user Id
+            this.$window.sessionStorage.setItem('userId', userInfo.userId);
             // store claims
             for (let prop in userInfo) {
                 if (prop.indexOf('claim_') == 0) {
@@ -56,6 +59,9 @@
         logout() {
             // clear all of session storage (including claims)
             this.$window.sessionStorage.clear();
+        }
+        getUserId() {
+            return this.$window.sessionStorage.getItem('userId');
         }
 
         isLoggedIn() {

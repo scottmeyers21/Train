@@ -1,15 +1,15 @@
 ﻿namespace MyApp.Controllers {
 
     export class HomeController {
-        public cars;
+        //public cars;
 
-        constructor
-        (
-            private carService: MyApp.Services.CarService,
-            private $location: angular.ILocationService
-        ) {
-            this.cars = this.carService.listCars();
-        }
+        //constructor
+        //(
+        //    private carService: MyApp.Services.CarService,
+        //    private $location: angular.ILocationService
+        //) {
+        //    this.cars = this.carService.listCars();
+        //}
     }
     export class AddCarController {
         public newCar;

@@ -280,7 +280,7 @@ namespace Train.Controllers {
                 return BadRequest(ModelState);
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email, Company=model.Company };
+            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email, Id = model.userId };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
@@ -327,7 +327,7 @@ namespace Train.Controllers {
                 return InternalServerError();
             }
 
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email, Id = model.UserId };
 
             IdentityResult result = await UserManager.CreateAsync(user);
             if (!result.Succeeded) {

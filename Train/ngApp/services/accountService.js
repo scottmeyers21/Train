@@ -12,6 +12,8 @@ var MyApp;
             AccountService.prototype.storeUserInfo = function (userInfo) {
                 // store auth token
                 this.$window.sessionStorage.setItem('token', userInfo.access_token);
+                // store user Id
+                this.$window.sessionStorage.setItem('userId', userInfo.userId);
                 // store claims
                 for (var prop in userInfo) {
                     if (prop.indexOf('claim_') == 0) {
@@ -57,6 +59,9 @@ var MyApp;
             AccountService.prototype.logout = function () {
                 // clear all of session storage (including claims)
                 this.$window.sessionStorage.clear();
+            };
+            AccountService.prototype.getUserId = function () {
+                return this.$window.sessionStorage.getItem('userId');
             };
             AccountService.prototype.isLoggedIn = function () {
                 return this.$window.sessionStorage.getItem('token');
@@ -137,4 +142,3 @@ var MyApp;
         angular.module('MyApp').service('accountService', AccountService);
     })(Services = MyApp.Services || (MyApp.Services = {}));
 })(MyApp || (MyApp = {}));
-//# sourceMappingURL=accountService.js.map

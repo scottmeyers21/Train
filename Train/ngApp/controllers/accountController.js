@@ -3,12 +3,14 @@ var MyApp;
     var Controllers;
     (function (Controllers) {
         var AccountController = (function () {
-            function AccountController(accountService, $location) {
+            function AccountController(accountService, $location, carService) {
                 var _this = this;
                 this.accountService = accountService;
                 this.$location = $location;
+                this.carService = carService;
                 this.getExternalLogins().then(function (results) {
                     _this.externalLogins = results;
+                    _this.cars = _this.carService.listCars();
                 });
             }
             AccountController.prototype.getClaim = function (type) {
@@ -19,6 +21,9 @@ var MyApp;
             };
             AccountController.prototype.logout = function () {
                 this.accountService.logout();
+            };
+            AccountController.prototype.getUserId = function () {
+                this.accountService.getUserId();
             };
             AccountController.prototype.getExternalLogins = function () {
                 return this.accountService.getExternalLogins();
@@ -55,6 +60,9 @@ var MyApp;
                 }).catch(function (results) {
                     _this.validationMessages = results;
                 });
+            };
+            RegisterController.prototype.cancel = function () {
+                this.registerUser = {};
             };
             return RegisterController;
         }());
@@ -119,4 +127,3 @@ var MyApp;
         Controllers.ConfirmEmailController = ConfirmEmailController;
     })(Controllers = MyApp.Controllers || (MyApp.Controllers = {}));
 })(MyApp || (MyApp = {}));
-//# sourceMappingURL=accountController.js.map
