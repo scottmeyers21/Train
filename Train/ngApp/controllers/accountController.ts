@@ -47,7 +47,9 @@
                 this.validationMessages = results;
             });
         }
-
+        public cancel() {
+            this.loginUser = {}
+        }
         constructor(private accountService: MyApp.Services.AccountService, private $location: ng.ILocationService) { }
     }
 

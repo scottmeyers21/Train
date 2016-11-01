@@ -45,6 +45,9 @@ var MyApp;
                     _this.validationMessages = results;
                 });
             };
+            LoginController.prototype.cancel = function () {
+                this.loginUser = {};
+            };
             return LoginController;
         }());
         Controllers.LoginController = LoginController;
@@ -127,3 +130,4 @@ var MyApp;
         Controllers.ConfirmEmailController = ConfirmEmailController;
     })(Controllers = MyApp.Controllers || (MyApp.Controllers = {}));
 })(MyApp || (MyApp = {}));
+//# sourceMappingURL=accountController.js.map

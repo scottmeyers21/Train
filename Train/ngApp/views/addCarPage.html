@@ -1,63 +1,66 @@
-﻿<h1 id="addCarHeader">Incoming Car</h1>
+﻿<div id="addCarBackground">
+    <img src="http://eskipaper.com/images/train-track-wallpaper-hd-1.jpg" width="2272" height="1501" alt="" />
 
-<form class="form-inline" id="addCarForm" name="controller.addForm" ng-submit="controller.addForm.$valid && controller.save()">
+    <form class="form-inline" id="addCarForm" name="controller.addForm" ng-submit="controller.addForm.$valid && controller.save()">
 
-   
-   
-
-    <div class="addCarDiv">
-        <label class="control-label">
-            Empty or Loaded:
-        </label>
-        <span class="addCarSpan">
-            <select required class="form-control" id="emptyOrLoaded"  name="emptyOrLoaded" ng-model="controller.newCar.emptyOrLoaded">
-                <option value=""></option>
-                <option value="Empty">Empty</option>
-                <option value="Loaded">Loaded</option>
-            </select>
-        </span>
-    </div>
-
-    <div class="addCarDiv">
-        <label class="control-label">
-            Car Type:
-        </label>
-        <span class="addCarSpan">
-            <select required class="form-control" id="carType" name="carType" ng-model="controller.newCar.cartype">
-                <option value=""></option>
-                <option value="Hopper">Hopper</option>
-                <option value="Flatbed">Flatbed</option>
-                <option value="Tank">Tank</option>
-                <option value="Gondola">Gondola</option>
-            </select>
-        </span>
-    </div>
-
-    <div class="addCarDiv">
-        <label class="control-label">
-            Shipped By (UP or BNSF):
-        </label>
-        <span class="addCarSpan">
-            <select required class="form-control" id="shippedBy" name="shippedBy" ng-model="controller.newCar.shippedBy">
-                <option value=""></option>
-                <option value="Union Pacific">Union Pacific</option>
-                <option value="BNSF">BNSF</option>
-            </select>
-        </span>
-    </div>
-
-    <div class="addCarDiv">
-        <label class="control-label">
-            Railcar Number:
-        </label>
-        <span class="addCarSpan">
-            <input required class="form-control" id="railcarText" pattern="(?=^.{1,10}$)^([A-Za-z]{1,4}\s*[0-9]{1,6})$" name="railCarNumber" ng-model="controller.newCar.railcarNumber" />
-        </span>
-    </div>
-    <div class="addCarDiv">
-        <input class="btn-success" id="addCarButton" type="submit" value="Submit and Add Another Car" /> 
+        <div>
+            <img id="addCarImage" src="data:image/png;base64,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" />
         </div>
-    <div class="addCarDiv">
-        <input class="btn-warning" ng-click="controller.cancel()" id="cancelCarButton" type="button" value="Cancel"/>
-    </div>
-</form>
+
+            <div class="addCarDiv">
+                <label class="control-label addCarLabel">
+                    Empty or Loaded:
+                </label>
+                <span class="addCarSpan">
+                    <select required class="form-control" id="emptyOrLoaded" name="emptyOrLoaded" ng-model="controller.newCar.emptyOrLoaded">
+                        <option value=""></option>
+                        <option value="Empty">Empty</option>
+                        <option value="Loaded">Loaded</option>
+                    </select>
+                </span>
+            </div>
+
+            <div class="addCarDiv">
+                <label class="control-label addCarLabel">
+                    Car Type:
+                </label>
+                <span class="addCarSpan">
+                    <select required class="form-control" id="carType" name="carType" ng-model="controller.newCar.cartype">
+                        <option value=""></option>
+                        <option value="Hopper">Hopper</option>
+                        <option value="Flatbed">Flatbed</option>
+                        <option value="Tank">Tank</option>
+                        <option value="Gondola">Gondola</option>
+                    </select>
+                </span>
+            </div>
+
+            <div class="addCarDiv">
+                <label class="control-label addCarLabel">
+                    Shipped By (UP or BNSF):
+                </label>
+                <span class="addCarSpan">
+                    <select required class="form-control" id="shippedBy" name="shippedBy" ng-model="controller.newCar.shippedBy">
+                        <option value=""></option>
+                        <option value="Union Pacific">Union Pacific</option>
+                        <option value="BNSF">BNSF</option>
+                    </select>
+                </span>
+            </div>
+
+            <div class="addCarDiv">
+                <label class="control-label addCarLabel">
+                    Railcar Number:
+                </label>
+                <span class="addCarSpan">
+                    <input required class="form-control" id="railcarText" pattern="(?=^.{1,10}$)^([A-Za-z]{1,4}\s*[0-9]{1,6})$" name="railCarNumber" ng-model="controller.newCar.railcarNumber" />
+                </span>
+            </div>
+            <div class="addCarDiv">
+                <input class="btn-success" id="addCarButton" type="submit" value="Submit and Add Another Car" />
+            </div>
+            <div class="addCarDiv">
+                <input class="btn-warning" ng-click="controller.cancel()" id="cancelCarButton" type="button" value="Cancel" />
+            </div>
+    </form>
+</div>
