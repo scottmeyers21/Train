@@ -154,6 +154,9 @@ font-size: 90px;
 font-size: 45px;
 color: white;
 }
+.homeLinks {
+color: white;
+}
 
 welcome {
 margin-top: 200px;
@@ -167,6 +170,16 @@ height: 300px;
     background-color: #27273d;
     border-color: #E7E7E7;
     margin-bottom:0px;
+    height: 100px;
+}
+#navbarDiv {
+height: 100px;
+}
+#bs-example-navbar-collapse-1 {
+height: 100px;
+}
+#navbarDiv2 {
+height: 100px;
 }
 /* title */
 .navbar-default .navbar-brand {
@@ -195,6 +208,51 @@ height: 300px;
 .navbar-default .navbar-nav > .open > a:focus {
     color: #dcdce8;
     background-color:  #27273d;
+}
+#navBrand {
+height: 100px;
+}
+#navbarUl {
+height: 100px;
+}
+#navbarRight {
+height: 100px;
+width: 15%;
+margin-right: 15px;
+}
+#navbarLoginLi {
+height: 100px;
+width: 50%;
+}
+#navbarRegisterLi {
+height: 100px;
+width: 50%;
+}
+#navbarLogoutLi {
+height: 100px;
+width: 50%
+}
+#navbarLoginA {
+height: 100px;
+width: 100%;
+font-size: 24px;
+padding-top: 1.5em;
+font-family: 'Franklin Gothic', Tahoma, sans-serif;
+}
+#navbarRegisterA {
+height: 100px;
+width: 100%;
+font-size: 24px;
+padding-top: 1.5em;
+font-family: 'Franklin Gothic', Tahoma, sans-serif;
+}
+#navbarLogoutA {
+height: 100px;
+width: 100%;
+font-size: 24px;
+padding-top: 1.5em;
+font-family: 'Franklin Gothic', Tahoma, sans-serif;
+color: white;
 }
 /*Add Car Page*/
 #addCarHeader {
@@ -288,5 +346,5 @@ height: 20%;
 width: 20%;
 margin-left: 40%;
 margin-bottom: 25px;
-opacity: .3;
+opacity: .6;
 }
