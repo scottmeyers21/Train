@@ -37,6 +37,11 @@
                 controller: MyApp.Controllers.ConfirmEmailController,
                 controllerAs: 'controller'
             })
+            .when('/addRecord', {
+                templateUrl: '/ngApp/views/addRecord.html',
+                controller: MyApp.Controllers.AddCarController,
+                controllerAs: 'controller'
+            })
             .when('/addCarPage', {
                 templateUrl: '/ngApp/views/addCarPage.html',
                 controller: MyApp.Controllers.AddCarController,

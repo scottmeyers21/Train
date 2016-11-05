@@ -204,6 +204,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\CarsController.cs" />
+    <Compile Include="API\RecordController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -269,6 +270,14 @@
     <Compile Include="Migrations\201610210641596_IdentityFix.Designer.cs">
       <DependentUpon>201610210641596_IdentityFix.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611040530415_RecordAdded.cs" />
+    <Compile Include="Migrations\201611040530415_RecordAdded.Designer.cs">
+      <DependentUpon>201611040530415_RecordAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611040626241_AddedUserToRecord.cs" />
+    <Compile Include="Migrations\201611040626241_AddedUserToRecord.Designer.cs">
+      <DependentUpon>201611040626241_AddedUserToRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -276,6 +285,7 @@
     <Compile Include="Models\EFRepository.cs" />
     <Compile Include="Models\Cars.cs" />
     <Compile Include="Models\IEFRepository.cs" />
+    <Compile Include="Models\Record.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -294,6 +304,7 @@
     <Content Include="Global.asax" />
     <Content Include="ngApp\views\about.html" />
     <Content Include="ngApp\views\addCarPage.html" />
+    <Content Include="ngApp\views\addRecord.html" />
     <Content Include="ngApp\views\confirmEmail.html" />
     <Content Include="ngApp\views\externalLogin.html" />
     <Content Include="ngApp\views\externalRegister.html" />
@@ -398,6 +409,12 @@
     <EmbeddedResource Include="Migrations\201610210641596_IdentityFix.resx">
       <DependentUpon>201610210641596_IdentityFix.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611040530415_RecordAdded.resx">
+      <DependentUpon>201611040530415_RecordAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611040626241_AddedUserToRecord.resx">
+      <DependentUpon>201611040626241_AddedUserToRecord.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -429,6 +446,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Record\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

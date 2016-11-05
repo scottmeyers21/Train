@@ -42,6 +42,21 @@ var MyApp;
             return UserProfileController;
         }());
         Controllers.UserProfileController = UserProfileController;
+        var AddRecordController = (function () {
+            function AddRecordController(recordService, $location) {
+                this.recordService = recordService;
+                this.$location = $location;
+            }
+            AddRecordController.prototype.save = function () {
+                var _this = this;
+                this.recordService.save(this.newRecord).then(function () { return _this.newRecord = {}; });
+            };
+            AddRecordController.prototype.cancel = function () {
+                this.newRecord = {};
+            };
+            return AddRecordController;
+        }());
+        Controllers.AddRecordController = AddRecordController;
         var AboutController = (function () {
             function AboutController() {
             }

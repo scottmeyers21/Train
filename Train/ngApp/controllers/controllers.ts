@@ -10,6 +10,7 @@
         //) {
         //    this.cars = this.carService.listCars();
         //}
+
     }
     export class AddCarController {
         public newCar;
@@ -48,6 +49,20 @@
             ) {
             this.cars = this.carService.listUserCars($routeParams['userId']);
         }
+
+    }
+    export class AddRecordController {
+        public newRecord;
+        public save() {
+            this.recordService.save(this.newRecord).then(() => this.newRecord = {});
+        }
+        public cancel() {
+            this.newRecord = {};
+        }
+        constructor(
+            private recordService: MyApp.Services.RecordService,
+            private $location: angular.ILocationService
+        ) { }
 
     }
 

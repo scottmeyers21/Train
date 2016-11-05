@@ -21,6 +21,19 @@ var MyApp;
         }());
         Services.CarService = CarService;
         angular.module('MyApp').service('carService', CarService);
+        var RecordService = (function () {
+            function RecordService($resource, $window) {
+                this.$window = $window;
+                this.RecordResource = $resource('/api/record/:id');
+                this.UserProfileResource = $resource('api/cars/userProfile/:userId');
+            }
+            RecordService.prototype.save = function (record) {
+                return this.RecordResource.save(record).$promise;
+            };
+            return RecordService;
+        }());
+        Services.RecordService = RecordService;
+        angular.module('MyApp').service('recordService', RecordService);
     })(Services = MyApp.Services || (MyApp.Services = {}));
 })(MyApp || (MyApp = {}));
 //# sourceMappingURL=services.js.map

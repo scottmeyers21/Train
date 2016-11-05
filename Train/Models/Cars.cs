@@ -14,6 +14,8 @@ namespace Train.Models {
         public string RailcarNumber { get; set; }
         //public virtual ApplicationUser ApplicationUser { get; set; }
         public string UserId { get; set; }
+        public string RecordId { get; set; }
+        public virtual Record Record { get; set; }
     
     }
 }

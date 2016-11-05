@@ -25,6 +25,7 @@ namespace Train.Models {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser> {
 
         public IDbSet<Cars> Cars { get; set; }
+        public IDbSet<Record> Record { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false) {
         }
