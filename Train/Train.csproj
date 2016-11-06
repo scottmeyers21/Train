@@ -278,6 +278,10 @@
     <Compile Include="Migrations\201611040626241_AddedUserToRecord.Designer.cs">
       <DependentUpon>201611040626241_AddedUserToRecord.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611060550138_RecordUserId.cs" />
+    <Compile Include="Migrations\201611060550138_RecordUserId.Designer.cs">
+      <DependentUpon>201611060550138_RecordUserId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -285,7 +289,9 @@
     <Compile Include="Models\EFRepository.cs" />
     <Compile Include="Models\Cars.cs" />
     <Compile Include="Models\IEFRepository.cs" />
+    <Compile Include="Models\IRecordRepository.cs" />
     <Compile Include="Models\Record.cs" />
+    <Compile Include="Models\RecordRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -414,6 +420,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611040626241_AddedUserToRecord.resx">
       <DependentUpon>201611040626241_AddedUserToRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611060550138_RecordUserId.resx">
+      <DependentUpon>201611060550138_RecordUserId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

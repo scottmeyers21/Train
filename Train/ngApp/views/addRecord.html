@@ -1,1 +1,6 @@
-﻿Quantity: <input ng-model="controller.newrecord.quantity"/>
+﻿<form name= "controller.addRecord" ng-submit="controller.addRecord.$valid && controller.save()">>
+    Quantity: <input ng-model="controller.newRecord.quantity" />
+    <div class="addCarDiv">
+        <input class="btn-success" id="addRecordButton" onclick="controller.save()" type="submit" value="Submit and Add Another Car" />
+    </div>
+</form>

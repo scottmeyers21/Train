@@ -17,6 +17,9 @@ namespace Train.Models {
         public IList<Cars> ListCars() {
             return _db.Cars.ToList();
         }
+
+        
+    
         /// <summary> 
                 /// Find movie by primary key. 
                 /// </summary> 
@@ -47,20 +50,7 @@ namespace Train.Models {
             }
 
         }
-        public void SaveRecord(Record recordToSave) {
-            if (recordToSave.Id == 0) {
-                _db.Record.Add(recordToSave);
-                _db.SaveChanges();
-
-            } else {
-                var original = this.Find(recordToSave.Id);
-                original.Quantity = recordToSave.Quantity;
-                original.CarType = carToSave.CarType;
-                original.ShippedBy = carToSave.ShippedBy;
-                original.RailcarNumber = carToSave.RailcarNumber;
-                _db.SaveChanges();
-            }
-        }
+     
         public IList<Cars> GetUserCars(string userId) {
             return _db.Cars.Where(c => (c.UserId == userId)).ToList();
 

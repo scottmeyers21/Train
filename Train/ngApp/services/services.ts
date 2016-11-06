@@ -23,16 +23,17 @@
 
     export class RecordService {
         private RecordResource;
-        public UserProfileResource;
+        //public UserProfileResource;
 
         public save(record) {
+            debugger
             return this.RecordResource.save(record).$promise;
         }
         constructor($resource: angular.resource.IResourceService, private $window: ng.IWindowService) {
             this.RecordResource = $resource('/api/record/:id');
-            this.UserProfileResource = $resource('api/cars/userProfile/:userId');
+            //this.UserProfileResource = $resource('api/cars/userProfile/:userId');
 
         }
     }
-    angular.module('MyApp').service('recordService', RecordService)
+    angular.module('MyApp').service('recordService', RecordService);
 }

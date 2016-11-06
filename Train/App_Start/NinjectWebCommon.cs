@@ -61,7 +61,8 @@ namespace Train.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IEFRepository>().To<EFRepository>(); ;
+            kernel.Bind<IEFRepository>().To<EFRepository>();
+            kernel.Bind<IRecordRepository>().To<RecordRepository>();
         }        
     }
 }

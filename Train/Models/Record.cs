@@ -9,7 +9,7 @@ namespace Train.Models {
         public int Quantity { get; set; }
         public DateTime DateCreated { get; set; }
         public bool IsActive { get; set; }
-        public ApplicationUser User { get; set; }
+        public string UserId { get; set; }
         public virtual ICollection<Cars> Cars { get; set; }
     }
 }

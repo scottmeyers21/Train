@@ -214,3 +214,4 @@ C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Tr
 C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Train.Migrations.IdentityFix.resources
 C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Train.Migrations.RecordAdded.resources
 C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Train.Migrations.AddedUserToRecord.resources
+C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Train.Migrations.RecordUserId.resources

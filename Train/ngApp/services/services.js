@@ -25,9 +25,11 @@ var MyApp;
             function RecordService($resource, $window) {
                 this.$window = $window;
                 this.RecordResource = $resource('/api/record/:id');
-                this.UserProfileResource = $resource('api/cars/userProfile/:userId');
+                //this.UserProfileResource = $resource('api/cars/userProfile/:userId');
             }
+            //public UserProfileResource;
             RecordService.prototype.save = function (record) {
+                debugger;
                 return this.RecordResource.save(record).$promise;
             };
             return RecordService;

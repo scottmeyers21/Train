@@ -49,6 +49,7 @@ var MyApp;
             }
             AddRecordController.prototype.save = function () {
                 var _this = this;
+                debugger;
                 this.recordService.save(this.newRecord).then(function () { return _this.newRecord = {}; });
             };
             AddRecordController.prototype.cancel = function () {

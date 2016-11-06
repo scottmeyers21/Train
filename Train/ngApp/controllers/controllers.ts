@@ -54,6 +54,7 @@
     export class AddRecordController {
         public newRecord;
         public save() {
+            debugger
             this.recordService.save(this.newRecord).then(() => this.newRecord = {});
         }
         public cancel() {

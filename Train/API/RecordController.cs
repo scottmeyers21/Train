@@ -9,12 +9,12 @@ using Train.Models;
 
 namespace Train.API {
     public class RecordController : ApiController {
-        private IEFRepository _repo;
-        public RecordController(IEFRepository repo) {
+        private IRecordRepository _repo;
+        public RecordController(IRecordRepository repo) {
             this._repo = repo;
         }
         public IHttpActionResult PostRecord(Record record) {
-            var UserId = this.User.Identity.GetUserId();
+            record.UserId = User.Identity.GetUserId();
             if (!ModelState.IsValid) {
                 return BadRequest(this.ModelState);
             }

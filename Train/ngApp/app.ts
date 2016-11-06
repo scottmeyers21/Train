@@ -39,7 +39,7 @@
             })
             .when('/addRecord', {
                 templateUrl: '/ngApp/views/addRecord.html',
-                controller: MyApp.Controllers.AddCarController,
+                controller: MyApp.Controllers.AddRecordController,
                 controllerAs: 'controller'
             })
             .when('/addCarPage', {
