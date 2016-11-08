@@ -55,7 +55,7 @@
         public newRecord;
         public save() {
             debugger
-            this.recordService.save(this.newRecord).then(() => this.newRecord = {});
+            this.recordService.save(this.newRecord).then(() => { this.$location.path("/addCarPage") });
         }
         public cancel() {
             this.newRecord = {};

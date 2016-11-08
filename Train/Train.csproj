@@ -282,6 +282,14 @@
     <Compile Include="Migrations\201611060550138_RecordUserId.Designer.cs">
       <DependentUpon>201611060550138_RecordUserId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611080645292_addedForeignKey3.cs" />
+    <Compile Include="Migrations\201611080645292_addedForeignKey3.Designer.cs">
+      <DependentUpon>201611080645292_addedForeignKey3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611080743151_ForeignKeyFailure.cs" />
+    <Compile Include="Migrations\201611080743151_ForeignKeyFailure.Designer.cs">
+      <DependentUpon>201611080743151_ForeignKeyFailure.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -423,6 +431,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611060550138_RecordUserId.resx">
       <DependentUpon>201611060550138_RecordUserId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611080645292_addedForeignKey3.resx">
+      <DependentUpon>201611080645292_addedForeignKey3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611080743151_ForeignKeyFailure.resx">
+      <DependentUpon>201611080743151_ForeignKeyFailure.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

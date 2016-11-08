@@ -1,6 +1,27 @@
-﻿<form name= "controller.addRecord" ng-submit="controller.addRecord.$valid && controller.save()">>
-    Quantity: <input ng-model="controller.newRecord.quantity" />
-    <div class="addCarDiv">
-        <input class="btn-success" id="addRecordButton" onclick="controller.save()" type="submit" value="Submit and Add Another Car" />
-    </div>
-</form>
+﻿<div id="addRecordBackground">
+    <img src="http://eskipaper.com/images/train-track-wallpaper-hd-1.jpg" width="2272" height="1501" alt="" />
+
+    <form class="form-inline" id="addRecordForm" name="controller.addRecord" ng-submit="controller.addRecord.$valid && controller.save()">
+
+        <div>
+            <img id="addRecordImage" src="data:image/png;base64,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" />
+        </div>
+
+        <div class="addRecordDiv">
+            <label class="control-label addRecordLabel">
+                Number of Cars:
+            </label>
+            <span class="addRecordSpan">
+                <input required class="form-control" id="recordText" name="recordQuantity" ng-model="controller.newRecord.quantity" />
+            </span>
+        </div>
+
+     
+        <div class="addRecordDiv">
+            <input class="btn-success" id="addRecordButton" type="submit" value="Submit and Add Cars" />
+        </div>
+        <div class="addRecordDiv">
+            <input class="btn-warning" ng-click="controller.cancel()" id="cancelRecordButton" type="button" value="Cancel" />
+        </div>
+    </form>
+</div>

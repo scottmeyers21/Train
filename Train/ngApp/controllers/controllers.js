@@ -50,7 +50,7 @@ var MyApp;
             AddRecordController.prototype.save = function () {
                 var _this = this;
                 debugger;
-                this.recordService.save(this.newRecord).then(function () { return _this.newRecord = {}; });
+                this.recordService.save(this.newRecord).then(function () { _this.$location.path("/addCarPage"); });
             };
             AddRecordController.prototype.cancel = function () {
                 this.newRecord = {};

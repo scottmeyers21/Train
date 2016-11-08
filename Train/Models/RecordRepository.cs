@@ -16,13 +16,13 @@ namespace Train.Models {
         }
         public void SaveRecord(Record recordToSave) {
             
-            if (recordToSave.Id == 0) {
+            if (recordToSave.RecordId == 0) {
                 recordToSave.DateCreated = DateTime.Now;
                 _db.Record.Add(recordToSave);
                 _db.SaveChanges();
 
             } else {
-                var original = this._db.Record.Find(recordToSave.Id);
+                var original = this._db.Record.Find(recordToSave.RecordId);
                 original.Quantity = recordToSave.Quantity;
                 original.IsActive = true;
                 

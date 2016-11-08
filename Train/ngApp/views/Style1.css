@@ -254,6 +254,64 @@ padding-top: 1.5em;
 font-family: 'Franklin Gothic', Tahoma, sans-serif;
 color: white;
 }
+/*Add Record Page*/
+#recordText{
+width: 33%;
+}
+#addRecordBackground {
+position: relative;
+width: 100%; 
+}
+.addRecordDiv {
+padding-bottom: 7px;
+
+}
+#addRecordButton {
+width: 66%;
+height: 35px;
+margin-left: 14%;
+margin-top: 3%;
+border-radius: 12px;
+font-size: large;
+background-color: #27273d;
+border-color: #27273d;
+
+}
+#cancelRecordButton {
+width: 66%;
+height: 35px;
+margin-left: 14%;
+margin-top: 3%;
+border-radius: 12px;
+font-size: large;
+background-color: #EBEB81;
+border-color: #EBEB81;
+}
+#addRecordForm {
+top: 60px;
+border-style: solid;
+border-radius: 10px 10px;
+border-color: lightgray;
+display: inline-block;
+height: 45%;
+width: 33%;
+padding-top: 50px;
+margin-left: 33%;
+margin-top: 100px;
+position: absolute;
+}
+.addRecordLabel {
+color: lightgray;
+font-family: 'Franklin Gothic', Tahoma, sans-serif;
+font-size: 16px;
+}
+#addRecordImage {
+height: 20%;
+width: 20%;
+margin-left: 40%;
+margin-bottom: 25px;
+opacity: 0.9;
+}
 /*Add Car Page*/
 #addCarHeader {
 margin-left: 10%;

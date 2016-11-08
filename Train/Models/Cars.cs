@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -13,8 +14,7 @@ namespace Train.Models {
         //UP(Union Pacific) or BNSF
         public string RailcarNumber { get; set; }
         //public virtual ApplicationUser ApplicationUser { get; set; }
-        public string UserId { get; set; }
-        public string RecordId { get; set; }
+        public string UserId { get; set; }     
         public virtual Record Record { get; set; }
     
     }
