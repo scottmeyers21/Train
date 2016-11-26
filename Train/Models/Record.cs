@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Train.Models {
     public class Record {
-        public int RecordId { get; set; }
+        public int Id { get; set; }
         public int Quantity { get; set; }
         public DateTime DateCreated { get; set; }
         public bool IsActive { get; set; }

@@ -9,16 +9,21 @@ var MyApp;
         }());
         Controllers.HomeController = HomeController;
         var AddCarController = (function () {
-            function AddCarController(carService, $location) {
+            function AddCarController(carService, $location, recordService, $routeParams) {
                 this.carService = carService;
                 this.$location = $location;
+                this.recordService = recordService;
+                this.record = this.recordService.get($routeParams["id"]);
+                this.cars = this.record.cars;
             }
             AddCarController.prototype.save = function () {
                 var _this = this;
-                this.carService.save(this.newCar).then(function () { return _this.newCar = {}; });
-            };
-            AddCarController.prototype.cancel = function () {
-                this.newCar = {};
+                this.carService.save(this.newCar, this.record.id).then(function () {
+                    _this.newCar = {}, _this.record = _this.recordService.get(_this.record.id);
+                });
+                //}
+                //public cancel() {
+                //    this.newCar = {};
             };
             return AddCarController;
         }());
@@ -49,7 +54,6 @@ var MyApp;
             }
             AddRecordController.prototype.save = function () {
                 var _this = this;
-                debugger;
                 this.recordService.save(this.newRecord).then(function () { _this.$location.path("/addCarPage"); });
             };
             AddRecordController.prototype.cancel = function () {

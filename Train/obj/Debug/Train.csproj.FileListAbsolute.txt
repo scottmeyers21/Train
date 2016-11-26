@@ -217,3 +217,5 @@ C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Tr
 C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Train.Migrations.RecordUserId.resources
 C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Train.Migrations.addedForeignKey4.resources
 C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Train.Migrations.ForeignKeyFailure.resources
+C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Train.Migrations.anothermigration.resources
+C:\Users\scott\Documents\Visual Studio 2015\Projects\Traincar\Train\obj\Debug\Train.Migrations.backToId.resources

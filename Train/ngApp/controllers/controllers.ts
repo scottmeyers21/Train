@@ -14,16 +14,27 @@
     }
     export class AddCarController {
         public newCar;
+        public record;
+        public id;
+        public cars;
+
         public save() {
-            this.carService.save(this.newCar).then(() => this.newCar = {}); 
-        }
-        public cancel() {
-            this.newCar = {};
+            this.carService.save(this.newCar, this.record.id).then(() => {
+                this.newCar = {}, this.record = this.recordService.get(this.record.id);
+            });
+        //}
+        //public cancel() {
+        //    this.newCar = {};
         }
         constructor(
             private carService: MyApp.Services.CarService,
-            private $location: angular.ILocationService
-        ) { }
+            private $location: angular.ILocationService,
+            private recordService: MyApp.Services.RecordService,
+            $routeParams: ng.route.IRouteParamsService
+        ) {
+            this.record = this.recordService.get($routeParams["id"]);
+            this.cars = this.record.cars;
+        }
 
     }
     export class ModIncomingController {
@@ -54,7 +65,6 @@
     export class AddRecordController {
         public newRecord;
         public save() {
-            debugger
             this.recordService.save(this.newRecord).then(() => { this.$location.path("/addCarPage") });
         }
         public cancel() {

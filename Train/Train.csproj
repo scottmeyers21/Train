@@ -290,6 +290,14 @@
     <Compile Include="Migrations\201611080743151_ForeignKeyFailure.Designer.cs">
       <DependentUpon>201611080743151_ForeignKeyFailure.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611152050003_anothermigration.cs" />
+    <Compile Include="Migrations\201611152050003_anothermigration.Designer.cs">
+      <DependentUpon>201611152050003_anothermigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611260609021_backToId.cs" />
+    <Compile Include="Migrations\201611260609021_backToId.Designer.cs">
+      <DependentUpon>201611260609021_backToId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -304,6 +312,7 @@
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AddCarsVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -437,6 +446,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611080743151_ForeignKeyFailure.resx">
       <DependentUpon>201611080743151_ForeignKeyFailure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611152050003_anothermigration.resx">
+      <DependentUpon>201611152050003_anothermigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611260609021_backToId.resx">
+      <DependentUpon>201611260609021_backToId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

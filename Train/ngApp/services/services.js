@@ -11,11 +11,17 @@ var MyApp;
             CarService.prototype.listCars = function () {
                 return this.CarResource.query();
             };
+            CarService.prototype.get = function (id) {
+                return this.CarResource.get({ id: id });
+            };
+            CarService.prototype.save = function (carToSave, recordId) {
+                var data = {};
+                data.carToSave = carToSave;
+                data.recordId = recordId;
+                return this.CarResource.save(data).$promise;
+            };
             CarService.prototype.listUserCars = function (userId) {
                 return this.UserProfileResource.query({ userId: userId });
-            };
-            CarService.prototype.save = function (car) {
-                return this.CarResource.save(car).$promise;
             };
             return CarService;
         }());
@@ -31,6 +37,9 @@ var MyApp;
             RecordService.prototype.save = function (record) {
                 debugger;
                 return this.RecordResource.save(record).$promise;
+            };
+            RecordService.prototype.get = function (id) {
+                return this.RecordResource.get({ id: id });
             };
             return RecordService;
         }());

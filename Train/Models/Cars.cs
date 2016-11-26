@@ -14,7 +14,7 @@ namespace Train.Models {
         //UP(Union Pacific) or BNSF
         public string RailcarNumber { get; set; }
         //public virtual ApplicationUser ApplicationUser { get; set; }
-        public string UserId { get; set; }     
+        public string UserId { get; set; }   
         public virtual Record Record { get; set; }
     
     }

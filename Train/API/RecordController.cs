@@ -13,6 +13,19 @@ namespace Train.API {
         public RecordController(IRecordRepository repo) {
             this._repo = repo;
         }
+        //public IEnumerable<Record> Get() {
+        //    var records = _repo.SearchRecords();
+        //    return records;
+        //}
+        //public IHttpActionResult Get(int id) {
+        //    var match = _repo.FindRecordWithCars(id);
+
+        //    if (match == null) {
+        //        return NotFound();
+        //    }
+        //    return Ok(match);
+        //}
+
         public IHttpActionResult PostRecord(Record record) {
             record.UserId = User.Identity.GetUserId();
             if (!ModelState.IsValid) {
